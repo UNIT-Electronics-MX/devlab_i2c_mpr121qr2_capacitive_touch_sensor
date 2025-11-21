@@ -1,5 +1,5 @@
 
-# DevLab: [Protocol/Interface] [Chip/Model] [Brief Description][Module/Sensor/Shield/Adapter]
+# DevLab: I2C MPR121QR2 Capacitive Touch Sensor
 <!-- Exception:
 
 The PULSAR development board line does not use the DevLab: prefix.
