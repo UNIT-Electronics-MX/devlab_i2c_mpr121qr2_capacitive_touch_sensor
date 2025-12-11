@@ -1,69 +1,71 @@
 
 # DevLab: I2C MPR121QR2 Capacitive Touch Sensor
-<!-- Exception:
-
-The PULSAR development board line does not use the DevLab: prefix.
-
-Format: PULSAR [MCU/Model]
-
-Examples: PULSAR C6, PULSAR H2, PULSAR RP2350
-
-The JUN R3 board also does not use DevLab:
-
-Example: JUN R3 -->
-
-## Introduction
-
-This is a modular development board based on a popular microcontroller, designed for rapid prototyping and educational use. It features flexible power options, modern connectivity, and user-friendly interfaces. An integrated LED matrix allows for simple visual feedback and display.
 
 <div align="center">
-  <img src="hardware/resources/unit_top_v_1_0_0_icp10111_barometric_pressure_sensor.png" width="450px" alt="Development Board">
-  <p><em>Development Board</em></p>
+  <img src="" width="450px" alt="DevLab MPR121 Capacitive Touch Sensor">
 </div>
 
 <div align="center">
 
-### Quick Setup
+### Quick Start
 
 [<img src="https://img.shields.io/badge/Product%20Wiki-blue?style=for-the-badge" alt="Product Wiki">](#)
-[<img src="https://img.shields.io/badge/Datasheet-green?style=for-the-badge" alt="Datasheet">](#)
+[<img src="https://img.shields.io/badge/Datasheet-green?style=for-the-badge" alt="Datasheet">](https://www.nxp.com/docs/en/data-sheet/MPR121.pdf)
 [<img src="https://img.shields.io/badge/Buy%20Now-orange?style=for-the-badge" alt="Buy Now">](#)
-[<img src="https://img.shields.io/badge/Getting%20Started-purple?style=for-the-badge" alt="Getting Started">](#)
+[<img src="https://img.shields.io/badge/Getting%20Started-purple?style=for-the-badge" alt="Getting Started">](docs/)
 
 </div>
-
-<div align="center" >
 
 ## Overview
 
-| Feature           | Description                                         |
-|-------------------|-----------------------------------------------------|
-| Microcontroller   | 8-bit MCU                                           |
-| Memory            | Flash, SRAM, EEPROM                                 |
-| Clock Speed       | 16 MHz                                              |
-| Power Supply      | USB-C (5V)                                          |
-| Interfaces        | UART, I2C, SPI, PWM, ADC, GPIO                      |
-| LED Matrix        | 5x5 RGB LED Matrix                                  |
-| Connectivity      | USB-C for programming and power                     |
-| Form Factor       | UNO-compatible                                      |
-| Development IDEs  | Arduino IDE, PlatformIO                             |
-| Onboard Features  | Integrated LED matrix, programmable LED, reset button|
-| Expansion Port    | I2C connector for sensors and modules               |
+A development module featuring the NXP MPR121 capacitive touch sensor controller with 12 independent touch inputs, I2C communication, and configurable addressing via DIP switch.
 
-</div>
+**Key Specifications:**
+- 12 capacitive touch electrodes (E0–E11)
+- I2C interface (0x5A, 0x5B, 0x5C, 0x5D)
+- 3.0V – 3.6V operation (3.3V recommended)
+- IRQ interrupt support
+- Triple connector options: Qwiic, JST, 2.54mm headers
+
+## Quick Start
+
+### Hardware Connection
+```
+Controller       MPR121 Module
+----------       -------------
+3.3V      -----> VCC
+GND       -----> GND
+SDA       -----> SDA
+SCL       -----> SCL
+IRQ       -----> IRQ (optional)
+```
+
+### DIP Switch Configuration
+
+| DIP1 | DIP2 | DIP3 | Address |
+|:----:|:----:|:----:|:-------:|
+| OFF  | OFF  | OFF  | 0x5A    |
+| ON   | OFF  | OFF  | 0x5B    |
+| OFF  | ON   | OFF  | 0x5C    |
+| OFF  | OFF  | ON   | 0x5D    |
+
+**Note:** Only activate ONE DIP switch at a time.
 
 ## Applications
 
-- **Prototyping:** Quickly develop and test ideas.
-- **Education:** Suitable for learning microcontroller basics.
-- **Wearables:** Compact and versatile for wearable devices.
-- **Displays:** Use the LED matrix for simple visual output.
+- Touch-sensitive interfaces and control panels
+- Musical instruments (keyboards, MIDI controllers)
+- Interactive art installations
+- Robotics and wearable devices
+- Industrial sealed controls
 
 ## Resources
 
-- [Schematic Diagram](#)
-- [Pinout Diagram](#)
-- [Getting Started Guide](#)
+- [Complete Examples & Documentation](software/examples/)
+- [Hardware Documentation](hardware/)
+- [Schematic Diagram](hardware/)
+- [MPR121 Datasheet (NXP)](https://www.nxp.com/docs/en/data-sheet/MPR121.pdf)
+- [Getting Started Guide](docs/)
 
 ## 📝 License
 
