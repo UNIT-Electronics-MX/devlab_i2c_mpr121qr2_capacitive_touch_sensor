@@ -2,7 +2,7 @@
 # DevLab: I2C MPR121QR2 Capacitive Touch Sensor
 
 <div align="center">
-  <img src="" width="450px" alt="DevLab MPR121 Capacitive Touch Sensor">
+  <img src="./hardware/resources/unit_top_v_0_0_1ue0116_mpr121qr2_capacitive_touch_sensor.png" width="450px" alt="DevLab MPR121 Capacitive Touch Sensor">
 </div>
 
 <div align="center">
